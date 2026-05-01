@@ -1,0 +1,11 @@
+services:
+- name: service-tls
+  addr: :2020
+  handler:
+    type: tcp
+  listener:
+    type: tcp
+  forwarder:
+    nodes:
+    - name: target-0
+      addr: 91.107.163.173:2020
